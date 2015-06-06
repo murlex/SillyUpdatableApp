@@ -1,4 +1,6 @@
 (function(){
+  //alert("bootstrap.js...");
+  console.log("bootstrap.js...");
 // Retrieved and slightly modified from: https://github.com/typicode/pegasus
 // --------------------------------------------------------------------------
 //
@@ -68,6 +70,8 @@ function loadManifest(manifest,fromLocalStorage,timeout){
 
   // Load Scripts
   function loadScripts(){
+    //alert("loading...");
+    console.log("loading...");
     scripts.forEach(function(src) {
       if(!src) return;
       // Ensure the 'src' has no '/' (it's in the root already)
@@ -77,13 +81,13 @@ function loadManifest(manifest,fromLocalStorage,timeout){
       if(src.substr(-3) === ".js"){
         el= document.createElement('script');
         el.type= 'text/javascript';
-        el.src= src + '?' + now;
+        el.src= src;// + '?' + now;
         el.async = false;
       // Load CSS
       } else {
         el= document.createElement('link');
         el.rel = "stylesheet";
-        el.href = src + '?' + now;
+        el.href = src;// + '?' + now;
         el.type = "text/css";
       }
       head.appendChild(el);

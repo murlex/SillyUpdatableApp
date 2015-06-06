@@ -18,5 +18,8 @@ sillyApp.run(function($ionicPlatform, $http) {
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+    window.BOOTSTRAP_OK = true;
+    //alert("set BOOTSTRAP_OK");
+    console.log("set BOOTSTRAP_OK");
   });
 });

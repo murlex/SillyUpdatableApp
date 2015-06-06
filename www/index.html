@@ -3,24 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' cdvfile://*; style-src 'unsafe-inline' 'self' cdvfile://*; script-src 'self' 'unsafe-eval' cdvfile://*">
     <title></title>
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <!--<link href="lib/ionic/css/ionic.css" rel="stylesheet">-->
+    <!--<link href="css/style.css" rel="stylesheet">-->
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+    <script src="cordova-app-loader-complete.js"></script>
+    <!--<script src="bootstrap.js" timeout="5100" manifest="manifest.json" server="http://195.62.19.72/sillyapp/"></script>-->
+    <script src="bootstrap.js" timeout="5100" manifest="manifest.json" server="http://localhost:8000/Documents/GitHub/SillyUpdatableApp/www/"></script>
+
+    <!-- ionic/angularjs js -->
+    <!--<script src="lib/ionic/js/ionic.bundle.js"></script>-->
+      
+    <!--<script src="autoupdate.js"></script>-->
 
     <!-- your app's js -->
-    <script src="js/app.js"></script>
-    <script src="js/sillycontroller.js"></script>
+    <!--<script src="js/app.js"></script>-->
+    <!--<script src="js/sillycontroller.js"></script>-->
   </head>
   <body ng-app="SillyApp">
     <ion-pane>
@@ -29,8 +35,16 @@
       </ion-header-bar>
       <ion-content>
       <div ng-controller="sillyController">
-        The ony thing this app is doing is this:
+        The only thing this app is doing is this:<br>
         <b>{{title}}</b>
+        <br>
+        Operation result: {{status}}
+        <br>
+        <button ng-click="check()">Check</button>
+        <button ng-click="download()">Download</button>
+        <button ng-click="update()">Update</button>
+        <button ng-click="reload()">Reload</button>
+        <button ng-click="restore()">Restore</button>
       </div>
       </ion-content>
     </ion-pane>

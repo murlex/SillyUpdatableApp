@@ -1,0 +1,32 @@
+{
+  "files": {
+    "ionic": {
+      "version": "179480e56d4b4faac332b2abaa43b31abda071f2",
+      "filename": "lib/ionic/js/ionic.bundle.js"
+    },
+    "app": {
+      "version": "523e092ce40058ffbe28129a5ffec69d20a64d74",
+      "filename": "js/app.js"
+    },
+    "sillycontroller": {
+      "version": "6595489ebaf1de73414264a821fab3d5847b293d",
+      "filename": "js/sillycontroller.js"
+    },
+    "style": {
+      "version": "75264f43f170ea4fd8f905d47aa1568248f54223",
+      "filename": "css/style.css"
+    },
+    "ionicStyle": {
+      "version": "58c76e806bf43078d4243c542bbaa6b6807535e3",
+      "filename": "lib/ionic/css/ionic.css"
+    }
+  },
+  "load": [
+    "lib/ionic/js/ionic.bundle.js",
+    "js/app.js",
+    "js/sillycontroller.js",
+    "lib/ionic/css/ionic.css",
+    "css/style.css"
+  ],
+  "version": "e8c050227408c47ef0f9ee57d82d7bcf719856d3"
+}
